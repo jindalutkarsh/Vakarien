@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Payment Checkout</title>
+    <link rel="shortcut icon" type="image/x-icon" href="./WhatsApp Image 2021-05-12 at 23.12.22.jpeg" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./fontawesome-free-5.7.2-web 2/css/all.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#OPEN_JOBS").css("color", "#9c4668");
+            $("#navigation_button").click(function () {
+                $("#show_navigation_buttons").toggle();
+                $("navigation_button").css("border", "none");
+                $("#show_navigation_buttons").css("display", "flex");
+            });
+        });
+    </script>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        #footer {
+            width: 100%;
+            background-color: #f1f1f1;
+            height: 60%;
+            display: flex;
+            font-family: calibri;
+            margin-top: -20px;
+        }
+
+        #first_footer {
+            width: 40%;
+            margin-left: 80px;
+            margin-top: 25px;
+            margin: ;
+            height: 100%;
+        }
+
+        #second_footer {
+            margin-top: 25px;
+            margin-left: 30px;
+            width: 30%;
+            height: 100%;
+        }
+
+        .footer_button {
+            height: 35px;
+            font-size: 15px;
+            font-weight: 550;
+            color: #0c1027;
+            width: 30%;
+            border-color: #0c1027;
+            background-color: white;
+            border-radius: 10px;
+            transition-duration: 1s;
+        }
+
+        .footer_button:hover {
+            background-color: #9c4668;
+            cursor: pointer;
+        }
+
+        .small_text_footer {
+            color: #9c4668;
+            font-family: calibri;
+        }
+
+        #contact_icons {
+            margin-top: 40px;
+            font-size: 20px;
+        }
+
+        #contact_icon {
+            margin-right: 15px;
+            color: #0c1027;
+            transition-duration: 1s;
+        }
+
+        #contact_icon:hover {
+            color: #9c4668;
+        }
+
+        .link_footer {
+            text-decoration: none;
+        }
+
+        .text_warning {
+            color: #9c4668;
+            margin-top: 0px;
+            display: none;
+        }
+
+        #description {
+            resize: vertical;
+        }
+
+        @media screen and (max-width: 950px) {
+            #form {
+                display: block;
+            }
+
+            #form_section {
+                width: 100%;
+            }
+
+            #form_side_bar {
+                width: 90%;
+            }
+
+            #footer_image {
+                display: none;
+            }
+
+            #footer_vakarien {
+                display: flex;
+            }
+
+            .form_input {
+                width: 90%;
+            }
+
+            #first_footer {
+                width: 100%;
+                margin-left: 15px;
+            }
+
+            #second_footer {
+                width: 100%;
+                margin-left: 15px;
+                margin-top: 0px;
+            }
+
+            .small_text_footer {
+                margin-right: 10px;
+                margin-top: -19px;
+            }
+
+            #footer {
+                display: block;
+            }
+
+            .footer_button {
+                margin-top: -10px;
+            }
+
+        }
+
+        @media only screen and (max-width: 550px) {
+            #form_section {
+                margin-left: 4px;
+            }
+
+            .footer_button {
+                height: 39px;
+            }
+
+            #form_side_bar {
+                margin-left: 4px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="row" data-aos="fade-left"
+    data-aos-anchor="#example-anchor"
+    data-aos-offset="500"
+    data-aos-duration="500">
+        <div class="col-75">
+            <div class="container">
+                <!-- <form id="validate" action="./action_page.php"> -->
+                <form id="validate" action="#">
+
+                    <div class="row">
+                        <div class="col-50" data-aos="fade-down"
+                        data-aos-easing="linear"
+                        data-aos-duration="1500">
+                            <h3>Billing Address</h3>
+                            <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+                            <input type="text" id="fname" name="fullname" placeholder="Vakarien" required>
+                            <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                            <input type="text" id="email" name="email" placeholder="vakarien.support@gmail.com"
+                                required>
+                            <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+                            <input type="text" id="adr" name="address"
+                                placeholder="Chitkara University, Rajpura, Chandigarh" required>
+                            <label for="city"><i class="fa fa-institution"></i> City</label>
+                            <input type="text" id="city" name="city" placeholder="Zhansi" required>
+
+                            <div class="row">
+                                <div class="col-50">
+                                    <label for="state">State</label>
+                                    <input type="text" id="state" name="state" placeholder="Punjab" required>
+                                </div>
+                                <div class="col-50">
+                                    <label for="zip">Zip</label>
+                                    <input type="text" id="zip" name="zip" placeholder="148101" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-50" data-aos="fade-down"
+                        data-aos-easing="linear"
+                        data-aos-duration="1500">
+                            <h3>Payment</h3>
+                            <label for="fname">Accepted Cards</label>
+                            <div class="icon-container">
+                                <i class="fa fa-cc-visa" style="color:navy;"></i>
+                                <i class="fa fa-cc-amex" style="color:blue;"></i>
+                                <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                                <i class="fa fa-cc-discover" style="color:orange;"></i>
+                            </div>
+
+                            <label for="cname">Name on Card</label>
+                            <input type="text" id="cname" name="cardname" placeholder="Vakarien" required>
+                            <label for="ccnum">Credit card number</label>
+                            <input type="text" id="ccnum" name="cardnumber" placeholder="9*********4" required>
+                            <label for="expmonth">Expiry Month</label>
+                            <input type="text" id="expmonth" name="expmonth" placeholder="May" required>
+                            <div class="row">
+                                <div class="col-50">
+                                    <label for="expyear">Expiry Year</label>
+                                    <input type="text" id="expyear" name="expyear" placeholder="2024" required>
+                                </div>
+                                <div class="col-50">
+                                    <label for="cvv">CVV</label>
+                                    <input type="text" id="cvv" name="cvv" placeholder="***" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <label data-aos="fade-down"
+                    data-aos-easing="linear"
+                    data-aos-duration="1700">
+                        <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+                    </label>
+                    <input type="submit" value="Continue to checkout" class="btn">
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <!--footer-->
+    <div id="footer">
+        <div id="first_footer" data-aos="fade-down"
+        data-aos-easing="linear"
+        data-aos-duration="1500">
+            <h1 style="font-size: 35px;">We're here to help</h1>
+            <h4 style="color:#9c4668">Visit our Help Center for answers to common questions or contact us directly.</h4>
+            <a href="#"><button class="footer_button">Feedback</button></a>
+            <a href="Contact_support.html"><button class="footer_button" style="margin-left: 20px">Contact
+                    Support</button></a>
+            <br>
+            <div style="display:inline-block">
+                <h1>Solution</h1>
+                <a href="Review_story.html" class="link_footer">
+                    <h4 class="small_text_footer">Reviews</h4>
+                </a>
+                <a href="#" class="link_footer">
+                    <h4 class="small_text_footer">Resume</h4>
+                </a>
+            </div>
+            <div style="display: inline-block;margin-left: 20px">
+                <h1>Resources</h1>
+                <a href="How_it_works.html" class="link_footer">
+                    <h4 class="small_text_footer">How it works</h4>
+                </a>
+                <a href="#" class="link_footer">
+                    <h4 class="small_text_footer">FAQ</h4>
+                </a>
+            </div>
+        </div>
+        <div id="second_footer" data-aos="fade-down"
+        data-aos-easing="linear"
+        data-aos-duration="1500">
+
+            <h1>Vakarien</h1>
+            <div id="footer_vakarien">
+                <a href="Open_jobs_Vakarien.html#job_heading" class="link_footer">
+                    <h4 class="small_text_footer">Why Vakarien</h4>
+                </a>
+                <a href="#" class="link_footer">
+                    <h4 class="small_text_footer">Meet The Founders</h4>
+                </a>
+                <a href="#" class="link_footer">
+                    <h4 class="small_text_footer">Cookies& privacy</h4>
+                </a>
+            </div>
+            <a href="Donate_us.html"><button class="footer_button">Donate Us</button></a>
+
+            <div id="contact_icons">
+                <a href="#" class="link_footer"><i id="contact_icon" class="fab fa-facebook-f"></i></a>
+                <a href="#" class="link_footer"><i id="contact_icon" class="fab fa-instagram"></i></a>
+                <a href="#" class="link_footer"><i id="contact_icon" class="fab fa-linkedin"></i></a>
+                <a href="#" class="link_footer"><i id="contact_icon" class="fab fa-apple"></i></a>
+                <a href="#" class="link_footer"><i id="contact_icon" class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+        <div style="margin-left: -180px">
+            <img src="./WhatsApp Image 2021-05-12 at 10.57.49 (1).jpeg" id="footer_image">
+
+        </div>
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+        $('#validate').validate({
+            roles: {
+                fullname: {
+                    required: true,
+                },
+                email: {
+                    required: true,
+                },
+                address: {
+                    required: true,
+                },
+                city: {
+                    required: true,
+                },
+                state: {
+                    required: true,
+                },
+                zip: {
+                    required: true,
+                },
+                cardname: {
+                    required: true,
+                },
+                cardnumber: {
+                    required: true,
+                },
+                expmonth: {
+                    required: true,
+                },
+                expyear: {
+                    required: true,
+                },
+                cvv: {
+                    required: true,
+                },
+
+            },
+            messages: {
+                fullname: "Please input full name*",
+                email: "Please input email*",
+                city: "Please input city*",
+                address: "Please input address*",
+                state: "Please input state*",
+                zip: "Please input address*",
+                cardname: "Please input card name*",
+                cardnumber: "Please input card number*",
+                expmonth: "Please input exp month*",
+                expyear: "Please input exp year*",
+                cvv: "Please input cvv*",
+            },
+        });
+    </script>
+</body>
+
+
+<script>
+    $(document).ready(function () {
+        $(document).bind("contextmenu", function (e) {
+            return false;
+        });
+    })
+</script>
+<script>
+    AOS.init();
+</script>
+
+</html>
